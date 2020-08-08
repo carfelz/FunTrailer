@@ -1,0 +1,25 @@
+// Deprecated
+
+@import "_colors.scss";
+
+
+.green {
+  @include textCol("green");
+}
+
+
+.orange {
+  @include textCol("orange");
+}
+
+.red {
+  @include textCol("red");
+}
+
+.redLight {
+  @include textCol("redLight");
+}
+
+.blue {
+  @include textCol("blue");
+}

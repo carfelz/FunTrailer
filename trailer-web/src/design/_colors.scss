@@ -1,0 +1,175 @@
+/* stylelint-disable */
+// Dark mode
+
+$light-elevation-0: rgb(238, 238, 238);
+$dark-elevation-0: #1a1a1a;
+$dark-elevation-1: scale-color($dark-elevation-0, $lightness: 5%);
+$dark-elevation-2: scale-color($dark-elevation-0, $lightness: 7%);
+$dark-elevation-3: scale-color($dark-elevation-0, $lightness: 8%);
+$dark-elevation-4: scale-color($dark-elevation-0, $lightness: 9%);
+$dark-elevation-5: scale-color($dark-elevation-0, $lightness: 11%);
+$dark-elevation-6: scale-color($dark-elevation-0, $lightness: 12%);
+$dark-elevation-7: scale-color($dark-elevation-0, $lightness: 14%);
+$dark-elevation-8: scale-color($dark-elevation-0, $lightness: 15%);
+$elevate: rgba(255, 255, 255, 0.05);
+
+// Theme colours. TODO: wire up the base-theme colours with quasar without using css custom properties.
+// Browsers that don't support css custom properties get a bad dark mode. That's fine.
+
+$primary: var(--vee-color-primary);
+$dark-mode-primary: var(--vee-color-dark-primary);
+
+$secondary: var(--vee-color-secondary);
+$dark-mode-secondary: var(--vee-color-dark-secondary);
+
+$accent: var(--vee-color-accent);
+$dark-mode-accent: var(--vee-color-dark-accent);
+
+$positive: var(--vee-color-positive);
+$dark-mode-positive: var(--vee-color-dark-positive);
+
+$negative: var(--vee-color-negative);
+$dark-mode-negative: var(--vee-color-dark-negative);
+
+$info: var(--vee-color-info);
+$dark-mode-info: var(--vee-color-dark-info);
+
+$warning: var(--vee-color-warning);
+$dark-mode-warning: var(--vee-color-dark-warning);
+
+@mixin dark-mode {
+  body:global(.body--dark) & {
+    @content;
+  }
+}
+// Colours here get picked up by the other files to generate borders/text/backgrounds for that colour.
+// Fine to use the theming colours above in a quasar color prop, but non-theme colours don't get picked up by dark mode.
+// So using this for now.
+
+$colors: (
+  "primary": (
+    "light": $primary,
+    "dark": $dark-mode-primary,
+  ),
+  "secondary": (
+    "light": $secondary,
+    "dark": $dark-mode-secondary,
+  ),
+  "accent": (
+    "light": $accent,
+    "dark": $dark-mode-accent,
+  ),
+  "positive": (
+    "light": $positive,
+    "dark": $dark-mode-positive,
+  ),
+  "negative": (
+    "light": $negative,
+    "dark": $dark-mode-negative,
+  ),
+  "info": (
+    "light": $info,
+    "dark": $dark-mode-info,
+  ),
+  "warning": (
+    "light": $warning,
+    "dark": $dark-mode-warning,
+  ),
+  "green": (
+    "light": #21ba45,
+    "dark": #54ec82,
+  ),
+  "orange": (
+    "light": #ff8c00,
+    "dark": #ff9e22,
+  ),
+  "red": (
+    "light": #cd353a,
+    "dark": #eb4a67,
+  ),
+  "redLight": (
+    "light": #ef5350,
+    "dark": #ef5350,
+  ),
+  "grey": (
+    "light": #9a8f97,
+    "dark": #9a8f97,
+  ),
+  "blueGrey": (
+    "light": #607d8b,
+    "dark": #90a4ae,
+  ),
+  "teal": (
+    "light": #009688,
+    "dark": #4db6ac,
+  ),
+  "deepOrange": (
+    "light": #f4511e,
+    "dark": #ff7043,
+  ),
+  "amber": (
+    "light": #ffc107,
+    "dark": #ffd54f,
+  ),
+  "yellow": (
+    "light": #fef8c4,
+    "dark": #fcd73b,
+  ),
+  "blue": (
+    "light": #2196f3,
+    "dark": #64b5f6,
+  ),
+  "blueLight": (
+    "light": #03a9f4,
+    "dark": #81d4fa,
+  ),
+  "opposite": (
+    "light": black,
+    "dark": white,
+  ),
+);
+
+@mixin textCol($color-name, $include-dark: true) {
+  $values: map-get($colors, #{$color-name});
+  $light: map-get($values, "light");
+  $dark: map-get($values, "dark");
+
+  color: $light !important;
+
+  @include dark-mode {
+    color: $dark !important;
+  }
+}
+
+@mixin borderCol(
+  $color-name,
+  $border-width: 1px,
+  $border-style: solid,
+  $include-dark: true
+) {
+  $values: map-get($colors, #{$color-name});
+  $light: map-get($values, "light");
+  $dark: map-get($values, "dark");
+
+  border: $border-width $border-style $light;
+
+  @include dark-mode {
+    border-color: $dark;
+  }
+}
+
+@mixin bgCol($color-name, $include-dark: true, $dark-text: black) {
+  $values: map-get($colors, #{$color-name});
+  $light: map-get($values, "light");
+  $dark: map-get($values, "dark");
+
+  color: white;
+  background-color: $light;
+
+  @if $include-dark {
+    @include dark-mode {
+      color: $dark-text;
+      background-color: $dark;
+    }
+  }
+}

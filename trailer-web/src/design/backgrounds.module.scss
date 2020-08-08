@@ -1,0 +1,24 @@
+@import "_colors.scss";
+
+// Deprecated
+
+.green {
+  @include bgCol("green");
+}
+
+
+.orange {
+  @include bgCol("orange");
+}
+
+.red {
+  @include bgCol("red");
+}
+
+.redLight {
+  @include bgCol("redLight");
+}
+
+.grey {
+  @include bgCol("grey");
+}

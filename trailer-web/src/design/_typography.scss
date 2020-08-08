@@ -1,0 +1,128 @@
+$text-base-size: 1rem;
+$text-xs: 0.694rem;
+$text-sm: 0.833rem;
+$text-md: 1.2rem;
+$text-lg: 1.44rem;
+$text-xl: 1.728rem;
+$text-xxl: 2.074rem;
+$text-xxxl: 2.488rem;
+
+@font-face {
+  font-family: 'chevin-pro';
+  src: url('/fonts/ChevinPro-Thin.eot');
+  src: url('/fonts/ChevinPro-Thin.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/ChevinPro-Thin.woff2') format('woff2'),
+       url('/fonts/ChevinPro-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'chevin-pro';
+  src: url('/fonts/ChevinPro-ThinItalic.eot');
+  src: url('/fonts/ChevinPro-ThinItalic.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/ChevinPro-ThinItalic.woff2') format('woff2'),
+       url('/fonts/ChevinPro-ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'chevin-pro';
+  src: url('/fonts/ChevinPro-Light.eot');
+  src: url('/fonts/ChevinPro-Light.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/ChevinPro-Light.woff2') format('woff2'),
+       url('/fonts/ChevinPro-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'chevin-pro';
+  src: url('/fonts/ChevinPro-LightItalic.eot');
+  src: url('/fonts/ChevinPro-LightItalic.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/ChevinPro-LightItalic.woff2') format('woff2'),
+       url('/fonts/ChevinPro-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'chevin-pro';
+  src: url('/fonts/ChevinPro-Medium.eot');
+  src: url('/fonts/ChevinPro-Medium.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/ChevinPro-Medium.woff2') format('woff2'),
+       url('/fonts/ChevinPro-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'chevin-pro';
+  src: url('/fonts/ChevinPro-MediumItalic.eot');
+  src: url('/fonts/ChevinPro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/ChevinPro-MediumItalic.woff2') format('woff2'),
+       url('/fonts/ChevinPro-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'chevin-pro';
+  src: url('/fonts/ChevinPro-DemiBold.eot');
+  src: url('/fonts/ChevinPro-DemiBold.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/ChevinPro-DemiBold.woff2') format('woff2'),
+       url('/fonts/ChevinPro-DemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'chevin-pro';
+  src: url('/fonts/ChevinPro-DemiBoldItalic.eot');
+  src: url('/fonts/ChevinPro-DemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/ChevinPro-DemiBoldItalic.woff2') format('woff2'),
+       url('/fonts/ChevinPro-DemiBoldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'chevin-pro';
+  src: url('/fonts/ChevinPro-Bold.eot');
+  src: url('/fonts/ChevinPro-Bold.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/ChevinPro-Bold.woff2') format('woff2'),
+       url('/fonts/ChevinPro-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'chevin-pro';
+  src: url('/fonts/ChevinPro-BoldItalic.eot');
+  src: url('/fonts/ChevinPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/ChevinPro-BoldItalic.woff2') format('woff2'),
+       url('/fonts/ChevinPro-BoldItalic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'chevin-pro';
+  src: url('/fonts/ChevinPro-ExtraBold.eot');
+  src: url('/fonts/ChevinPro-ExtraBold.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/ChevinPro-ExtraBold.woff2') format('woff2'),
+       url('/fonts/ChevinPro-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'chevin-pro';
+  src: url('/fonts/ChevinPro-ExtraBoldItalic.eot');
+  src: url('/fonts/ChevinPro-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/ChevinPro-ExtraBoldItalic.woff2') format('woff2'),
+       url('/fonts/ChevinPro-ExtraBoldItalic.woff') format('woff');
+  font-weight: 800;
+  font-style: italic;
+}
